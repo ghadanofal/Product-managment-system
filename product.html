@@ -30,12 +30,14 @@
 <input type="text" id="category" placeholder="category">
 <button id="submit">Create</button>
     </div>
-    <div class="output"></div>
+    <div class="output">
+ <div clas="searchBlock">
     <input  onkeyup="searchData(this.value)" type ="text" placeholder="search" id="search" >
-<div class="btnsearch">
+    <div class="btnsearch">
     <button onclick="getsearchMood(this.id)" id="searchTitle">Search by title</button>
-    <button onclick="getsearchMood(this.id)" id="searchCategoyr">Search by category</button>
+    <button onclick="getsearchMood(this.id)" id="searchCategory">Search by category</button>
     
+    </div>
 </div>
 <div id="deleteAll"></div>
 <table>
@@ -55,9 +57,10 @@
     
 </tbody>
 
+
     </tr>
 </table>
-
+     </div>
 
 </div>
 

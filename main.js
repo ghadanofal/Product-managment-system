@@ -177,7 +177,6 @@ let searchMood = 'title';
 
 function getsearchMood(id){
 
-//console.log(id)
 let search = document.getElementById('search');
 
 if (id=='searchTitle')
@@ -189,6 +188,7 @@ if (id=='searchTitle')
    search.placeholder = 'Search by category';
 
 }
+console.log(searchMood)
 search.focus()
 
 }
@@ -196,13 +196,15 @@ search.focus()
 
 
 function searchData(value){
+    console.log(value)
 let table= '';
 if (searchMood == 'title')
 {
+  
  for( let i=0 ; i< dataPro.length ; i++)
 {
    if(dataPro[i].title.includes(value))
-   {
+   {  
       table += `
       <tr>
          <td>${i}</td>
@@ -217,7 +219,8 @@ if (searchMood == 'title')
         <td><button onclick="updateData( ${i} )" id="Update" >Update</button></td>
         <td><button onclick="deleteData(  ${i}  )" id="Delete">Delete</button></td>
         
-      </tr>  ` ;
+      </tr>  ` 
+      ;
    }
 
 }
@@ -245,14 +248,12 @@ else{
          </tr>  ` ;
       }
 }
+
+
+}
+
 document.getElementById('tbody').innerHTML = table;
-
-
-
 }
-}
-
-
 
 
 
